@@ -1,0 +1,60 @@
+﻿@model Api_gladia.Models.Address
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Address</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address_cep)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address_cep)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address_uf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address_uf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address_city)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address_city)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address_district)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address_district)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address_public_place)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address_public_place)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address_complement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address_complement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fk_user_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fk_user_id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.address_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

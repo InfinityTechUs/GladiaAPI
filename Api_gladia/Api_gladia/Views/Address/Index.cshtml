@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Api_gladia.Models.Address>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.address_cep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address_uf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address_city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address_district)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address_public_place)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address_complement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fk_user_id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.address_cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address_uf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address_city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address_district)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address_public_place)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address_complement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fk_user_id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.address_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.address_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.address_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

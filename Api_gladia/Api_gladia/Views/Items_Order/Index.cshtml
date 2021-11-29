@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Api_gladia.Models.Items_Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fk_id_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.items_quant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.items_subtotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fk_id_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.items_quant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.items_subtotal)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.fk_id_prod">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.fk_id_prod">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.fk_id_prod">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
