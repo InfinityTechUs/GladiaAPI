@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api_gladia.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211128235907_InicialFapi")]
-    partial class InicialFapi
+    [Migration("20211130222213_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

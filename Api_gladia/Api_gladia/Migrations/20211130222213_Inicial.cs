@@ -2,7 +2,7 @@
 
 namespace Api_gladia.Migrations
 {
-    public partial class InicialF : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
